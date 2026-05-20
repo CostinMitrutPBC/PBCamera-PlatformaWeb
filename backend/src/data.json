@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "username": "admin",
+      "email": "admin@pbcamera.local",
+      "passwordHash": "$2b$10$5/bu2XNwlwVOMnwQopXnquv/OczG0W6yskkmHIPJitpf5ziEMU3/2",
+      "role": "ADMIN",
+      "createdAt": "2026-02-02T08:55:12.806Z"
+    },
+    {
+      "id": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
+      "username": "PeterBalta",
+      "email": "peterbalta2000@gmail.com",
+      "passwordHash": "$2b$10$vSTX6BHP7meBkk4PUuZ49eNYv0s/ifL3xZzOjIn4fiGGgJ809MOmO",
+      "role": "CLIENT",
+      "createdAt": "2026-02-02T09:59:47.147Z"
+    },
+    {
+      "id": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "username": "CostinMitrut",
+      "email": "costinmitrutpbc@gmail.com",
+      "passwordHash": "$2b$10$NpKLs608mo61cl2DZ1TfdedJJHncJhFYrsRBlF1de4lCiSu6yae5W",
+      "role": "CLIENT",
+      "createdAt": "2026-02-02T10:04:12.832Z"
+    }
+  ],
+  "videos": [
+    {
+      "id": "ac7e0f13-30a7-49df-ab08-60aa1da5b9d7",
+      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "originalName": "elicopter.mp4",
+      "storedName": "fixed-1770111383156-76db7e3cfe4d.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770111383156-76db7e3cfe4d.mp4",
+      "mime": "video/mp4",
+      "size": 9348763,
+      "uploadedAt": "2026-02-03T09:36:24.355Z"
+    },
+    {
+      "id": "7bff91d7-dab2-4891-889e-8b0d7d24beef",
+      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "originalName": "DJI_20251213104206_0230_D.MP4",
+      "storedName": "fixed-1770111359680-23595c3a8dff.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770111359680-23595c3a8dff.mp4",
+      "mime": "video/mp4",
+      "size": 64298928,
+      "uploadedAt": "2026-02-03T09:36:16.910Z"
+    },
+    {
+      "id": "c84a563b-bf62-477a-8977-5379c3ae6f99",
+      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
+      "originalName": "elicopter.mp4",
+      "storedName": "fixed-1770049495124-d7fe1d32614b.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770049495124-d7fe1d32614b.mp4",
+      "mime": "video/mp4",
+      "size": 9348763,
+      "uploadedAt": "2026-02-02T16:24:56.277Z"
+    },
+    {
+      "id": "26bbeb26-d2c2-4e90-879d-fe8eeadb776f",
+      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
+      "originalName": "DJI_20251213104206_0230_D.MP4",
+      "storedName": "fixed-1770049127873-b456effe8a86.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770049127873-b456effe8a86.mp4",
+      "mime": "video/mp4",
+      "size": 64298928,
+      "uploadedAt": "2026-02-02T16:19:01.699Z"
+    },
+    {
+      "id": "f29b3249-aaca-4377-ad8f-25c5e4ad4767",
+      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
+      "originalName": "skiborsa.mp4",
+      "storedName": "fixed-1770047181634-18b274bdcf4a.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770047181634-18b274bdcf4a.mp4",
+      "mime": "video/mp4",
+      "size": 7014271,
+      "uploadedAt": "2026-02-02T15:46:22.540Z"
+    }
+  ]
+}

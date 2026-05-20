@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="nav">
+  <div class="wrap navWrap">
+    <div class="navCenter">
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn" href="contact.html">Contact</a>
+      <a class="btn" href="admin-users.html">Utilizatori</a>
+      <button class="btn" id="logoutBtn" type="button">Logout</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <h2 style="margin-top:0;">Upload video</h2>
+        <form id="uploadForm" style="display:grid; gap:10px;">
+          <label class="small">Alege client</label>
+          <select id="clientSelect"></select>
+
+          <label class="small">Alege fișier video</label>
+          <input class="input" type="file" id="videoFile" accept="video/*" required />
+
+          <button class="btn primary" type="submit">Upload</button>
+          <div class="small" id="status">—</div>
+        </form>
+
+        <div class="small" style="margin-top:10px;">
+          Storage pe disc: <code>D:\PBCamera\Video Clienti</code>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0;">Videouri (admin)</h2>
+        <div class="small" id="countLabel">Total: —</div>
+        <div style="margin-top:10px; overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Client</th>
+                <th>Nume</th>
+                <th>Size</th>
+                <th>Test</th>
+              </tr>
+            </thead>
+            <tbody id="videosTbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
