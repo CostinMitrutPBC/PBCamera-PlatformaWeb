@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Client</title>
+  <title>PBCamera — Galeria mea</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="nav">
-  <div class="wrap navWrap">
-    <div class="navCenter">
-      <button class="navBtn" onclick="location.href='index.html'">Home</button>
-      <button class="navBtn" onclick="location.href='contact.html'">Contact</button>
-      <button class="navBtn" id="videosNavBtn">Videoclipurile mele</button>
-      <button class="navBtn" id="authNavBtn">Login</button>
+  <div class="nav">
+    <div class="wrap navWrap">
+      <div class="navCenter">
+        <button class="navBtn" onclick="location.href='index.html'">Home</button>
+        <button class="navBtn" onclick="location.href='contact.html'">Contact</button>
+        <button class="navBtn" id="videosNavBtn">Galeria mea</button>
+        <button class="navBtn" id="authNavBtn">Login</button>
+      </div>
     </div>
   </div>
-</div>
-
-
-
 
   <div class="wrap">
-    <h2>Videourile mele</h2>
+    <h2>Galeria mea</h2>
+    <div class="small" style="margin-bottom:12px;">
+      Aici poți vedea pozele și videourile încărcate pentru contul tău.
+    </div>
     <div id="videoList"></div>
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

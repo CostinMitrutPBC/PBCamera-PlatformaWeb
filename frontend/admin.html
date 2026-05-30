@@ -7,60 +7,136 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
 <div class="nav">
   <div class="wrap navWrap">
     <div class="navCenter">
       <a class="btn" href="index.html">Home</a>
       <a class="btn" href="contact.html">Contact</a>
-      <a class="btn" href="admin-users.html">Utilizatori</a>
       <button class="btn" id="logoutBtn" type="button">Logout</button>
     </div>
   </div>
 </div>
 
+<div class="wrap wide">
 
+  <div class="tabsBar">
+    <button class="tabBtn isActive" data-tab="tabOverview" type="button">Overview</button>
+    <button class="tabBtn" data-tab="tabUpload" type="button">Upload</button>
+    <button class="tabBtn" data-tab="tabVideos" type="button">Galerie</button>
+    <button class="tabBtn" data-tab="tabUsers" type="button">Utilizatori</button>
+    <button class="tabBtn" data-tab="tabSuggestions" type="button">Sugestii</button>
+  </div>
 
-  <div class="wrap">
-    <div class="grid">
-      <div class="card">
-        <h2 style="margin-top:0;">Upload video</h2>
-        <form id="uploadForm" style="display:grid; gap:10px;">
-          <label class="small">Alege client</label>
-          <select id="clientSelect"></select>
+  <section class="tabPanel isActive" id="tabOverview">
+    <div class="card statsCard">
+      <h2 style="margin-top:0;">Statistici generale</h2>
 
-          <label class="small">Alege fișier video</label>
-          <input class="input" type="file" id="videoFile" accept="video/*" required />
-
-          <button class="btn primary" type="submit">Upload</button>
-          <div class="small" id="status">—</div>
-        </form>
-
-        <div class="small" style="margin-top:10px;">
-          Storage pe disc: <code>D:\PBCamera\Video Clienti</code>
+      <div class="statsRow" id="statsRow" style="margin-top:12px;">
+        <div class="statCard">
+          <div class="statLabel">Total fișiere galerie</div>
+          <div class="statValue" id="statVideos">0</div>
         </div>
-      </div>
 
-      <div class="card">
-        <h2 style="margin-top:0;">Videouri (admin)</h2>
-        <div class="small" id="countLabel">Total: —</div>
-        <div style="margin-top:10px; overflow:auto;">
-          <table>
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Client</th>
-                <th>Nume</th>
-                <th>Size</th>
-                <th>Test</th>
-              </tr>
-            </thead>
-            <tbody id="videosTbody"></tbody>
-          </table>
+        <div class="statCard">
+          <div class="statLabel">Total clienți</div>
+          <div class="statValue" id="statClients">0</div>
+        </div>
+
+        <div class="statCard">
+          <div class="statLabel">Spațiu ocupat</div>
+          <div class="statValue" id="statSpace">0 MB</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script src="app.js"></script>
+  <section class="tabPanel" id="tabUpload">
+    <div class="card">
+      <h2 style="margin-top:0;">Upload în galerie</h2>
+
+      <form id="uploadForm" style="display:grid; gap:10px;">
+        <label class="small" for="clientSelect">Alege client</label>
+        <select id="clientSelect" required></select>
+
+        <label class="small" for="videoFile">Alege poză sau video</label>
+        <input class="input" type="file" id="videoFile" accept="image/*,video/*" required />
+
+        <button class="btn primary" type="submit">Upload</button>
+        <div class="small" id="status">—</div>
+      </form>
+
+      <div class="small" style="margin-top:10px;">
+        Storage pe disc: <code>D:\PBCamera\Video Clienti</code>
+      </div>
+    </div>
+  </section>
+
+  <section class="tabPanel" id="tabVideos">
+    <div class="card">
+      <h2 style="margin-top:0;">Galerie (admin)</h2>
+
+      <div class="small" id="countLabel">Total: —</div>
+
+      <div class="filtersBar" style="margin-top:10px;">
+        <input class="input" id="videoSearch" placeholder="Caută după nume fișier..." />
+        <select id="videoClientFilter">
+          <option value="">Toți clienții</option>
+        </select>
+      </div>
+
+      <div style="margin-top:10px; overflow:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Client</th>
+              <th>Tip</th>
+              <th>Nume</th>
+              <th>Size</th>
+              <th>Status</th>
+              <th>Acțiuni</th>
+            </tr>
+          </thead>
+          <tbody id="videosTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tabPanel" id="tabUsers">
+    <div class="card usersCard">
+      <h2 style="margin-top:0;">Conturi înregistrate</h2>
+      <div class="small" id="usersCount">—</div>
+
+      <div class="usersTableWrap">
+        <table class="usersTable">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Creat</th>
+              <th>Acțiuni</th>
+            </tr>
+          </thead>
+          <tbody id="usersTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tabPanel" id="tabSuggestions">
+    <div class="card">
+      <h2 style="margin-top:0;">Sugestii clienți</h2>
+      <div class="small">Aici apar sugestiile trimise de clienți pentru fișierele din galerie.</div>
+      <div id="suggestionsList" style="margin-top:12px;"></div>
+    </div>
+  </section>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

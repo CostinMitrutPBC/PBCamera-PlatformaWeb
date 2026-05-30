@@ -1,8 +1,9 @@
+const path = require("path");
+
 module.exports = {
   PORT: 3000,
 
-  // IMPORTANT: în JS backslash-ul trebuie dublat
-  STORAGE_DIR: "D:\\PBCamera\\Video Clienti",
+  STORAGE_DIR: path.join(__dirname, "..", "storage"),
 
   SESSION_SECRET: "dev-secret-change-me",
 };

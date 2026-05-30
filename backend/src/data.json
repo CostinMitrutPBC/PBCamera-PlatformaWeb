@@ -9,14 +9,6 @@
       "createdAt": "2026-02-02T08:55:12.806Z"
     },
     {
-      "id": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
-      "username": "PeterBalta",
-      "email": "peterbalta2000@gmail.com",
-      "passwordHash": "$2b$10$vSTX6BHP7meBkk4PUuZ49eNYv0s/ifL3xZzOjIn4fiGGgJ809MOmO",
-      "role": "CLIENT",
-      "createdAt": "2026-02-02T09:59:47.147Z"
-    },
-    {
       "id": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
       "username": "CostinMitrut",
       "email": "costinmitrutpbc@gmail.com",
@@ -27,54 +19,72 @@
   ],
   "videos": [
     {
-      "id": "ac7e0f13-30a7-49df-ab08-60aa1da5b9d7",
+      "id": "5ebe024d-a6e0-4bcb-8b22-6a1666ef84e9",
       "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "originalName": "elicopter.mp4",
-      "storedName": "fixed-1770111383156-76db7e3cfe4d.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770111383156-76db7e3cfe4d.mp4",
-      "mime": "video/mp4",
-      "size": 9348763,
-      "uploadedAt": "2026-02-03T09:36:24.355Z"
+      "type": "image",
+      "originalName": "Sharm Moschee.jpeg",
+      "storedName": "1777297989929-62cbc551802a.jpeg",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\1777297989929-62cbc551802a.jpeg",
+      "mime": "image/jpeg",
+      "size": 57111,
+      "uploadedAt": "2026-04-27T13:53:09.934Z",
+      "hasEdited": true,
+      "editedName": "Sharm Moschee Editat.jpeg",
+      "editedStoredName": "1777300346852-18549e2bb7e1.jpeg",
+      "editedStoredPath": "D:\\PBCamera\\Video Clienti\\1777300346852-18549e2bb7e1.jpeg",
+      "editedMime": "image/jpeg",
+      "editedSize": 70343,
+      "editedAt": "2026-04-27T14:32:26.862Z"
     },
     {
-      "id": "7bff91d7-dab2-4891-889e-8b0d7d24beef",
+      "id": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
       "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
       "originalName": "DJI_20251213104206_0230_D.MP4",
-      "storedName": "fixed-1770111359680-23595c3a8dff.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770111359680-23595c3a8dff.mp4",
+      "storedName": "fixed-1770226066105-ffab4ce2084e.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770226066105-ffab4ce2084e.mp4",
       "mime": "video/mp4",
       "size": 64298928,
-      "uploadedAt": "2026-02-03T09:36:16.910Z"
+      "uploadedAt": "2026-02-04T17:28:03.982Z"
     },
     {
-      "id": "c84a563b-bf62-477a-8977-5379c3ae6f99",
-      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
+      "id": "423b5b27-02a4-40bf-81a8-a7a13e3276a8",
+      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
       "originalName": "elicopter.mp4",
-      "storedName": "fixed-1770049495124-d7fe1d32614b.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770049495124-d7fe1d32614b.mp4",
+      "storedName": "fixed-1770226060881-2fbeca62371b.mp4",
+      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770226060881-2fbeca62371b.mp4",
       "mime": "video/mp4",
       "size": 9348763,
-      "uploadedAt": "2026-02-02T16:24:56.277Z"
+      "uploadedAt": "2026-02-04T17:27:42.074Z"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "5938df68-74d1-4205-abbf-27c1a11839cb",
+      "videoId": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
+      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "username": "CostinMitrut",
+      "message": "Sa se taie sunetul de pe fundal",
+      "createdAt": "2026-05-26T09:56:25.831Z",
+      "resolved": false
     },
     {
-      "id": "26bbeb26-d2c2-4e90-879d-fe8eeadb776f",
-      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
-      "originalName": "DJI_20251213104206_0230_D.MP4",
-      "storedName": "fixed-1770049127873-b456effe8a86.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770049127873-b456effe8a86.mp4",
-      "mime": "video/mp4",
-      "size": 64298928,
-      "uploadedAt": "2026-02-02T16:19:01.699Z"
+      "id": "f6bb8264-b03a-4075-87a4-f170f61acd47",
+      "videoId": "5ebe024d-a6e0-4bcb-8b22-6a1666ef84e9",
+      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "username": "CostinMitrut",
+      "message": "Vreau culori mai calde",
+      "createdAt": "2026-04-27T13:54:52.664Z",
+      "resolved": true,
+      "resolvedAt": "2026-04-27T14:32:26.862Z"
     },
     {
-      "id": "f29b3249-aaca-4377-ad8f-25c5e4ad4767",
-      "clientId": "u-1547c471-d8d1-4540-a5dc-629c959170f2",
-      "originalName": "skiborsa.mp4",
-      "storedName": "fixed-1770047181634-18b274bdcf4a.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770047181634-18b274bdcf4a.mp4",
-      "mime": "video/mp4",
-      "size": 7014271,
-      "uploadedAt": "2026-02-02T15:46:22.540Z"
+      "id": "5312b7f1-b2a9-4612-8232-b89015929ba2",
+      "videoId": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
+      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "username": "CostinMitrut",
+      "message": "Vreau videoul alb negru",
+      "createdAt": "2026-04-27T12:48:43.971Z",
+      "resolved": false
     }
   ]
 }
