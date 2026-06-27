@@ -3,88 +3,100 @@
     {
       "id": "admin",
       "username": "admin",
-      "email": "admin@pbcamera.local",
       "passwordHash": "$2b$10$5/bu2XNwlwVOMnwQopXnquv/OczG0W6yskkmHIPJitpf5ziEMU3/2",
       "role": "ADMIN",
       "createdAt": "2026-02-02T08:55:12.806Z"
     },
     {
-      "id": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "username": "CostinMitrut",
-      "email": "costinmitrutpbc@gmail.com",
-      "passwordHash": "$2b$10$NpKLs608mo61cl2DZ1TfdedJJHncJhFYrsRBlF1de4lCiSu6yae5W",
+      "id": "u-c06815c8-dd9a-4290-8b33-d66c44466022",
+      "username": "client1",
+      "passwordHash": "$2b$10$WNG9HsrKWrFO8Lw0QO0oHukIvKxED81WVtYFQPkofpO3FeFWryS6K",
       "role": "CLIENT",
-      "createdAt": "2026-02-02T10:04:12.832Z"
+      "createdAt": "2026-06-01T13:54:23.332Z"
+    },
+    {
+      "id": "u-0748167c-0288-4443-a930-10b34012b354",
+      "username": "client2",
+      "passwordHash": "$2b$10$mKztCW7M2KiD2lWopJ28bOltyx7eS8iV7DL2vouyPk39lbOaPNF9W",
+      "role": "CLIENT",
+      "createdAt": "2026-06-01T13:54:37.203Z"
     }
   ],
   "videos": [
     {
-      "id": "5ebe024d-a6e0-4bcb-8b22-6a1666ef84e9",
-      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "type": "image",
-      "originalName": "Sharm Moschee.jpeg",
-      "storedName": "1777297989929-62cbc551802a.jpeg",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\1777297989929-62cbc551802a.jpeg",
-      "mime": "image/jpeg",
-      "size": 57111,
-      "uploadedAt": "2026-04-27T13:53:09.934Z",
-      "hasEdited": true,
-      "editedName": "Sharm Moschee Editat.jpeg",
-      "editedStoredName": "1777300346852-18549e2bb7e1.jpeg",
-      "editedStoredPath": "D:\\PBCamera\\Video Clienti\\1777300346852-18549e2bb7e1.jpeg",
-      "editedMime": "image/jpeg",
-      "editedSize": 70343,
-      "editedAt": "2026-04-27T14:32:26.862Z"
-    },
-    {
-      "id": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
-      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "originalName": "DJI_20251213104206_0230_D.MP4",
-      "storedName": "fixed-1770226066105-ffab4ce2084e.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770226066105-ffab4ce2084e.mp4",
+      "id": "ea9ebaa2-b730-49b6-930f-e66df1416f45",
+      "clientId": "u-0748167c-0288-4443-a930-10b34012b354",
+      "type": "video",
+      "originalName": "magazin.mp4",
+      "storedName": "1780322259120-7e4a0887ba9d.mp4",
+      "storedPath": "C:\\Users\\ASUS\\Downloads\\OneDrive\\Desktop\\pbcamera-PlatformaWeb\\backend\\storage\\1780322259120-7e4a0887ba9d.mp4",
       "mime": "video/mp4",
       "size": 64298928,
-      "uploadedAt": "2026-02-04T17:28:03.982Z"
+      "hasEdited": false,
+      "editedName": null,
+      "editedStoredName": null,
+      "editedStoredPath": null,
+      "editedMime": null,
+      "editedSize": null,
+      "editedAt": null,
+      "uploadedAt": "2026-06-01T13:57:39.503Z"
     },
     {
-      "id": "423b5b27-02a4-40bf-81a8-a7a13e3276a8",
-      "clientId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
+      "id": "57d5a4df-7746-4b82-bd2f-1539b6340eff",
+      "clientId": "u-0748167c-0288-4443-a930-10b34012b354",
+      "type": "video",
       "originalName": "elicopter.mp4",
-      "storedName": "fixed-1770226060881-2fbeca62371b.mp4",
-      "storedPath": "D:\\PBCamera\\Video Clienti\\fixed-1770226060881-2fbeca62371b.mp4",
+      "storedName": "1780322254592-186905acd402.mp4",
+      "storedPath": "C:\\Users\\ASUS\\Downloads\\OneDrive\\Desktop\\pbcamera-PlatformaWeb\\backend\\storage\\1780322254592-186905acd402.mp4",
       "mime": "video/mp4",
       "size": 9348763,
-      "uploadedAt": "2026-02-04T17:27:42.074Z"
+      "hasEdited": false,
+      "editedName": null,
+      "editedStoredName": null,
+      "editedStoredPath": null,
+      "editedMime": null,
+      "editedSize": null,
+      "editedAt": null,
+      "uploadedAt": "2026-06-01T13:57:34.665Z"
+    },
+    {
+      "id": "8e2ffa06-5c2f-41f5-933b-74d7aa530d75",
+      "clientId": "u-c06815c8-dd9a-4290-8b33-d66c44466022",
+      "type": "image",
+      "originalName": "charm.jpeg",
+      "storedName": "1780322240931-31a128d7d28f.jpeg",
+      "storedPath": "C:\\Users\\ASUS\\Downloads\\OneDrive\\Desktop\\pbcamera-PlatformaWeb\\backend\\storage\\1780322240931-31a128d7d28f.jpeg",
+      "mime": "image/jpeg",
+      "size": 57111,
+      "hasEdited": true,
+      "editedName": "charm editat.jpeg",
+      "editedStoredName": "1780323734690-50142d69d440.jpeg",
+      "editedStoredPath": "C:\\Users\\ASUS\\Downloads\\OneDrive\\Desktop\\pbcamera-PlatformaWeb\\backend\\storage\\1780323734690-50142d69d440.jpeg",
+      "editedMime": "image/jpeg",
+      "editedSize": 70343,
+      "editedAt": "2026-06-01T14:22:14.693Z",
+      "uploadedAt": "2026-06-01T13:57:20.936Z"
     }
   ],
   "suggestions": [
     {
-      "id": "5938df68-74d1-4205-abbf-27c1a11839cb",
-      "videoId": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
-      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "username": "CostinMitrut",
-      "message": "Sa se taie sunetul de pe fundal",
-      "createdAt": "2026-05-26T09:56:25.831Z",
+      "id": "a63069d6-6c2e-4623-ad62-b67cd67967f8",
+      "videoId": "8e2ffa06-5c2f-41f5-933b-74d7aa530d75",
+      "userId": "u-c06815c8-dd9a-4290-8b33-d66c44466022",
+      "username": "client1",
+      "message": "As dori poza să fie alb-negru",
+      "createdAt": "2026-06-27T13:02:01.525Z",
       "resolved": false
     },
     {
-      "id": "f6bb8264-b03a-4075-87a4-f170f61acd47",
-      "videoId": "5ebe024d-a6e0-4bcb-8b22-6a1666ef84e9",
-      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "username": "CostinMitrut",
-      "message": "Vreau culori mai calde",
-      "createdAt": "2026-04-27T13:54:52.664Z",
+      "id": "83cc8043-4b88-4b0f-bc1f-010f892af070",
+      "videoId": "8e2ffa06-5c2f-41f5-933b-74d7aa530d75",
+      "userId": "u-c06815c8-dd9a-4290-8b33-d66c44466022",
+      "username": "client1",
+      "message": "As dori poza sa aibe culori mai calde",
+      "createdAt": "2026-06-01T14:21:53.220Z",
       "resolved": true,
-      "resolvedAt": "2026-04-27T14:32:26.862Z"
-    },
-    {
-      "id": "5312b7f1-b2a9-4612-8232-b89015929ba2",
-      "videoId": "63dfd0a4-edbb-434f-8cec-6ee52b857e3b",
-      "userId": "u-dca313ad-39b1-4cab-b576-205567fc6e32",
-      "username": "CostinMitrut",
-      "message": "Vreau videoul alb negru",
-      "createdAt": "2026-04-27T12:48:43.971Z",
-      "resolved": false
+      "resolvedAt": "2026-06-01T14:22:14.693Z"
     }
   ]
 }

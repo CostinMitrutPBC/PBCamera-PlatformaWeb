@@ -30,25 +30,31 @@ function readDb() {
 }
 
 function writeDb(db) {
-  const safeDb = {
-    users: Array.isArray(db.users) ? db.users : [],
-    videos: Array.isArray(db.videos) ? db.videos : [],
-    suggestions: Array.isArray(db.suggestions) ? db.suggestions : [],
-  };
-
-  fs.writeFileSync(DB_PATH, JSON.stringify(safeDb, null, 2), "utf-8");
-}
-
-function findUserByEmail(email) {
-  const db = readDb();
-  const target = String(email || "").trim().toLowerCase();
-  return db.users.find((u) => u && typeof u.email === "string" && u.email.trim().toLowerCase() === target);
+  fs.writeFileSync(
+    DB_PATH,
+    JSON.stringify(
+      {
+        users: Array.isArray(db.users) ? db.users : [],
+        videos: Array.isArray(db.videos) ? db.videos : [],
+        suggestions: Array.isArray(db.suggestions) ? db.suggestions : [],
+      },
+      null,
+      2
+    ),
+    "utf-8"
+  );
 }
 
 function findUserByUsername(username) {
   const db = readDb();
   const target = String(username || "").trim().toLowerCase();
-  return db.users.find((u) => u && typeof u.username === "string" && u.username.trim().toLowerCase() === target);
+
+  return db.users.find(
+    (u) =>
+      u &&
+      typeof u.username === "string" &&
+      u.username.trim().toLowerCase() === target
+  );
 }
 
 function findUserById(id) {
@@ -69,19 +75,7 @@ function listUsers() {
 }
 
 function listClients() {
-  const db = readDb();
-  return db.users.filter((u) => u && u.role === "CLIENT");
-}
-
-function removeUserById(id) {
-  const db = readDb();
-  const target = String(id || "");
-  const idx = db.users.findIndex((u) => u && u.id === target);
-  if (idx === -1) return null;
-
-  const [removed] = db.users.splice(idx, 1);
-  writeDb(db);
-  return removed;
+  return readDb().users.filter((u) => u && u.role === "CLIENT");
 }
 
 function addVideo(video) {
@@ -102,26 +96,10 @@ function getVideoById(id) {
 function removeVideoById(id) {
   const db = readDb();
   const idx = db.videos.findIndex((v) => v && v.id === String(id));
+
   if (idx === -1) return null;
 
   const [removed] = db.videos.splice(idx, 1);
-  writeDb(db);
-  return removed;
-}
-
-function removeVideosByClientId(clientId) {
-  const db = readDb();
-  const target = String(clientId || "");
-
-  const removed = [];
-  const kept = [];
-
-  for (const v of db.videos) {
-    if (v && v.clientId === target) removed.push(v);
-    else kept.push(v);
-  }
-
-  db.videos = kept;
   writeDb(db);
   return removed;
 }
@@ -146,34 +124,77 @@ function listSuggestions() {
 function resolveSuggestion(id) {
   const db = readDb();
 
-  if (!Array.isArray(db.suggestions)) {
-    db.suggestions = [];
-  }
-
   const suggestion = db.suggestions.find((x) => x && x.id === id);
   if (!suggestion) return null;
 
   suggestion.resolved = true;
+  suggestion.resolvedAt = new Date().toISOString();
+
   writeDb(db);
   return suggestion;
 }
 
+function removeClientCascade(clientId) {
+  const db = readDb();
+  const target = String(clientId || "");
+
+  const userIndex = db.users.findIndex((u) => u && u.id === target);
+  if (userIndex === -1) return null;
+
+  const [removedUser] = db.users.splice(userIndex, 1);
+
+  const removedVideos = [];
+  const removedVideoIds = new Set();
+
+  db.videos = db.videos.filter((v) => {
+    if (v && v.clientId === target) {
+      removedVideos.push(v);
+      removedVideoIds.add(v.id);
+      return false;
+    }
+
+    return true;
+  });
+
+  const removedSuggestions = [];
+
+  db.suggestions = db.suggestions.filter((s) => {
+    const belongsToUser = s && s.userId === target;
+    const belongsToRemovedVideo = s && removedVideoIds.has(s.videoId);
+
+    if (belongsToUser || belongsToRemovedVideo) {
+      removedSuggestions.push(s);
+      return false;
+    }
+
+    return true;
+  });
+
+  writeDb(db);
+
+  return {
+    removedUser,
+    removedVideos,
+    removedSuggestions,
+  };
+}
+
 module.exports = {
-  findUserByEmail,
   findUserByUsername,
   findUserById,
+
   addUser,
   listUsers,
   listClients,
-  removeUserById,
 
   addVideo,
   listVideos,
   getVideoById,
   removeVideoById,
-  removeVideosByClientId,
 
   addSuggestion,
   listSuggestions,
   resolveSuggestion,
+
+  removeClientCascade,
 };

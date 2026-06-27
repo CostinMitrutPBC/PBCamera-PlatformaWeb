@@ -27,11 +27,11 @@ function getBotReply(message) {
   }
 
   if (msg.includes("parola") || msg.includes("login") || msg.includes("cont")) {
-    return "Dacă ai probleme cu autentificarea, verifică username-ul și parola. Dacă problema continuă, contactează administratorul.";
+    return "Dacă ai probleme cu autentificarea, verifică username-ul și parola. Dacă problema continuă, contactează administratorul platformei.";
   }
 
-  if (msg.includes("contact") || msg.includes("telefon") || msg.includes("email")) {
-    return "Ne poți contacta pe email la costinmitrutpbc@gmail.com sau din pagina Contact.";
+  if (msg.includes("contact") || msg.includes("telefon")) {
+    return "Pentru contact, accesează pagina Contact sau discută direct cu administratorul platformei.";
   }
 
   if (msg.includes("salut") || msg.includes("buna") || msg.includes("hello")) {

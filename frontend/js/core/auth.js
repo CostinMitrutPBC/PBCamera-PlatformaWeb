@@ -35,7 +35,6 @@ export function initRegister() {
     e.preventDefault();
 
     const username = document.getElementById("regUsername")?.value?.trim() || "";
-    const email = document.getElementById("regEmail")?.value?.trim() || "";
     const password = document.getElementById("regPassword")?.value || "";
     const status = document.getElementById("regStatus");
 
@@ -44,7 +43,7 @@ export function initRegister() {
     try {
       await api("/api/register", {
         method: "POST",
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       if (status) status.textContent = "Cont creat! Te poți loga acum.";

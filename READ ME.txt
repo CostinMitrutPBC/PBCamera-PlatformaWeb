@@ -2,5 +2,5 @@ Pentru a deschide site-ul poti folosi start.bat , pentru a inchide dupa in termi
 
 cont admin: admin   admin123
 
-cont client test 1: PeterBalta mitcos2004
-cont client test 2: CostinMitrut costin2004
+cont client test 1: client1 parola: client1234 
+cont client test 2: client2 parola: client1234
